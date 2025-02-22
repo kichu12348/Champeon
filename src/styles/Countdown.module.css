@@ -75,3 +75,23 @@
     font-size: 0.7rem;
   }
 }
+
+@media (max-width: 768px) {
+  .countdown {
+    gap: 0.6rem;
+  }
+
+  .countdownItem {
+    min-width: 50px;
+    padding: 0.5rem;
+  }
+
+  .number {
+    font-size: 1.7rem;
+  }
+
+  .label {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+}

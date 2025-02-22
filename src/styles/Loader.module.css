@@ -152,3 +152,10 @@
     clip: rect(21px, 900px, 67px, 0);
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .loaderText {
+    font-size: 4rem;
+  }
+}

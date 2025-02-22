@@ -5,10 +5,10 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import About from './pages/About';
 import Leaderboard from './pages/Leaderboard';
-import FAQ from './pages/FAQ';
 import Loader from './components/Loader';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import IndiviEvent from './pages/IndiviEvent';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -30,7 +30,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/about" element={<About />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="/faq" element={<FAQ />} />
+          <Route path="/events/:id" element={<IndiviEvent />} />
         </Routes>
         <Footer />
       </div>

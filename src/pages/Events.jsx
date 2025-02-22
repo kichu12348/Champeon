@@ -1,4 +1,5 @@
 import styles from '../styles/Events.module.css';
+import { Link } from 'react-router-dom';
 
 const eventsData = [
   {
@@ -41,7 +42,9 @@ export default function Events() {
             <h2 className={styles.eventName}>{event.name}</h2>
             <p className={styles.eventDate}>{event.date} | {event.venue}</p>
             <p className={styles.eventDetails}>{event.details}</p>
-            <button className={styles.registerButton}>Register Now</button>
+            <Link to={`/events/${event.id}`} className={styles.registerButton}>
+              View Details
+            </Link>
           </div>
         ))}
       </div>
