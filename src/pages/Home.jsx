@@ -1,13 +1,14 @@
 import Countdown from '../components/Countdown';
-import Navbar from '../components/Navbar';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <h1 style={{ fontSize: '4rem' }}>CAMPEON</h1>
-      <Countdown targetDate="2025-03-20T00:00:00" />
-      {/* ...optional content... */}
-    </>
+    <div className={styles.hero}>
+      <div className={styles.heroContent}>
+        <h1 className={styles.title}>CAMPEON</h1>
+        <p className={styles.subtitle}>INTERCOLLEGE SPORTS TOURNAMENT</p>
+        <Countdown targetDate="2025-03-20T00:00:00" />
+      </div>
+    </div>
   );
 }

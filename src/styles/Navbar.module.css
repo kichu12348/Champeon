@@ -1,22 +1,64 @@
 .navbar {
-  background-color: #1a1a1a;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(10, 10, 10, 0.95);
+  padding: 1.2rem 4rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navLinks {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .navLinks a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLinks a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff00c1, #00fff9);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .navLinks a:hover {
-  color: #ff4d4d;
+  color: #00fff9;
+  text-shadow: 0 0 8px rgba(0, 255, 249, 0.5);
+}
+
+.navLinks a:hover::before {
+  width: 100%;
+}
+
+.navLinks a.active {
+  color: #ff00c1;
+  text-shadow: 0 0 8px rgba(255, 0, 193, 0.5);
+}
+
+.navLinks a.active::before {
+  width: 100%;
+  background: #ff00c1;
+  box-shadow: 0 0 10px rgba(255, 0, 193, 0.5);
 }
